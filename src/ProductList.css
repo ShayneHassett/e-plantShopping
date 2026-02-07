@@ -218,6 +218,65 @@ body {
   .product-button.added-to-cart {
     background-color: grey; /* Grey when product is added */
   }
+
+    .product-button.disabled,
+    .product-button:disabled {
+        background-color: grey !important;
+        color: #fff !important;
+        cursor: not-allowed;
+        opacity: 0.7;
+    }
+
+    .product-button.disabled:hover,
+    .product-button:disabled:hover {
+        background-color: grey !important;
+    }
+
+    /* Cart badge inside SVG */
+    .cart-badge text {
+        font-family: Arial, sans-serif;
+        font-weight: 700;
+        pointer-events: none;
+    }
+
+    /* Wrapper for cart SVG so the badge can be absolutely positioned */
+    .cart-icon-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+
+    .cart-count-badge {
+        position: absolute;
+        /* place roughly at top-center of the cart basket; adjust with left/top percentages */
+        top: 38%;
+        left: 57%;
+        transform: translate(-50%, -45%);
+        min-width: 28px;
+        height: 28px;
+        padding: 0 6px;
+        border-radius: 999px;
+        background: #4CAF50;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1;
+        pointer-events: none;
+        box-shadow: 0 0 0 2px rgba(255,255,255,0.08);
+    }
+
+    @media (max-width: 480px) {
+        .cart-count-badge {
+            top: 36%;
+            left: 55%;
+            transform: translate(-50%, -45%);
+            min-width: 22px;
+            height: 22px;
+            font-size: 12px;
+        }
+    }
   @media (max-width: 1200px) {
     .product-card {
       flex: 1 1 calc(33.33% - 20px); /* Adjust width for 3 cards per row with 20px gap on medium screens */
