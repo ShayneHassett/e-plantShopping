@@ -181,13 +181,12 @@ body {
 .plant_heading{
     width: 400px;
     text-align: center;
-    margin: 20px;
+    margin: 20px auto;
     border: 1px solid rgb(5, 4, 4);
     border-left: none;
     border-right: none;
-
-    
 }
+
 /* Add Media Query for responsiveness */
 @media (max-width: 768px) {
     .product-card {
@@ -247,14 +246,13 @@ body {
 
     .cart-count-badge {
         position: absolute;
-        /* place roughly at top-center of the cart basket; adjust with left/top percentages */
-        top: 38%;
-        left: 57%;
+        top: 39%;
+        left: 51%;
         transform: translate(-50%, -45%);
-        min-width: 28px;
-        height: 28px;
+        min-width: 26px;
+        height: 26px;
         padding: 0 6px;
-        border-radius: 999px;
+        /*border-radius: 999px;*/
         background: #4CAF50;
         color: #fff;
         display: flex;
@@ -264,7 +262,11 @@ body {
         font-size: 14px;
         line-height: 1;
         pointer-events: none;
-        box-shadow: 0 0 0 2px rgba(255,255,255,0.08);
+    }
+
+    h1 {
+        width: 100%;
+        text-align: center;
     }
 
     @media (max-width: 480px) {
